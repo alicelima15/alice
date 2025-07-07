@@ -60,7 +60,7 @@ body {
     background-color: #fc12f0 !important;
 }
 .menu-sticky nav a:hover {
-    color: #ff00c8;
+    color: #cce3e7;
 }
 @keyframes aparece {
     0% { opacity:0 }
