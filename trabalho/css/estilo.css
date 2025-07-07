@@ -1,0 +1,271 @@
+section {min-height: 100vh;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+    
+.logocomputador{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    
+}
+.logocomputador img {
+    width: 80px;
+
+}
+.lojacomputador{
+    display:flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 0px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    align-items: center;
+    font-size: 50px;
+}
+/* Menu sticky */
+.menu-sticky {
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    background-color:#E4C2DE;
+    color: white;
+    /* padding: 20px 0; */
+    /* text-align: center; */
+    z-index: 1000;
+    height: 230px; /* Altura definida explicitamente */
+}
+
+.menu-sticky nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.ajustamenu{
+    background-color: #d665d1 !important;
+}
+.menu-sticky nav a:hover {
+    color: #ff00c8;
+}
+@keyframes aparece {
+    0% { opacity:0 }
+    100% { opacity:1 }
+}
+
+h1 {
+    animation: linear aparece both;
+    animation-timeline: view();
+    animation-range: cover 10% cover 60%;
+}
+/* Seções - são as âncoras */
+section {
+    padding: 10px ; 
+    min-height: 100vh ;
+    text-align: center;
+    scroll-margin-top: 230px; /* Corresponde à altura do menu */
+}
+section h1{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.produtos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.preco{
+    color:red
+}
+.Computadordell img{
+    width: 100%;
+}
+.computadorapple img{
+    width: 100%;
+}
+.fonedeouvido img{
+    width: 100%;
+}
+.mouse img{
+    width: 100%;
+}
+.caixadesom img{
+    width: 100%;
+}
+.produto {
+    margin: 10px;
+}
+.produto ul{
+    text-align: left;
+}
+
+#computadores {
+    background-color: #e0e0e0;
+}
+
+#acessórios {
+    background-color: #f0f0f0;
+}
+#cadastro {
+    background-color: #f0f0f0;
+}
+#painel {
+    background-color: #f0f0f0;
+}
+.formimg{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+    align-content: start;
+}
+form input{
+    height: 30px;
+}
+.produtos img{
+    width: 100%;
+    padding: 10px;
+}
+.divestrela{
+    /* width: 350px; */
+    width: 100%;
+    
+}
+.divestrela img{
+width: 100%;
+height: auto;
+}
+@media (width <900px) {
+
+.produtos figcaption{
+display:none;
+}
+.formimg{
+    grid-template-columns: 1fr;
+
+   /* width: 30px; */
+}
+}
+
+
+.containerpainel {
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-template-rows: 1fr 1fr;
+    
+ 
+    grid-template-areas:
+    "foto1 foto2 foto4"
+    "foto3 foto3 foto5";
+   }
+   @media(width <800px){
+    .containerpainel {
+        
+        
+        grid-template-columns: 1fr 1fr ;
+        
+        grid-template-rows: 1fr 1fr 1fr;
+        
+     
+        grid-template-areas:
+        "foto1 foto2"
+        "foto3 foto3"
+        "foto4 foto5";
+       }
+       .foto3{
+       
+       
+        background-position: center;
+    }
+   }
+.foto1{
+    grid-area: foto1;
+    background-image: url("../img/caixadesom.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+.foto2{
+    grid-area: foto2;
+    background-image: url("../img/computadoraplepainel.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+.foto3{
+    grid-area: foto3;
+    background-image: url("../img/computadorsamsungpainel.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+}
+.foto4{
+    grid-area: foto4;
+    background-image: url("../img/foneintraauricularjblpainel.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+.foto5{
+    grid-area: foto5;
+    background-image: url("../img/fonephilipspainel.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+.estrelaAnimada{
+    transform:rotate(0deg);
+    transition-property: transform;
+    transition-duration: 2s; 
+
+}
+.estrelaAnimada:hover{
+transform:rotate(180deg);
+}
+.luaAnimada{
+    width: 100px;
+  height: 100px;
+  background-color: red; 
+  position: relative;
+  left: 0px;
+  top: 0px;
+
+ animation-name: exemplo;  
+ animation-duration: 2s;      
+ /* animation-delay: 2s;   */
+ animation-iteration-count: infinite;  
+ /* animation-direction: alternate;  */
+ animation-timing-function:linear; 
+ animation-fill-mode:both;
+}
+@keyframes exemplo {
+    0%   {background-color:red; left:0px; top:20px;border-radius: 150px;width: 300px;height: 300px;}   
+    25%  {background-color:yellow; left:200px; top:0px;border-radius: 150px;width: 300px;height: 300px;}
+    50%  {background-color:blue; left:200px; top:200px;border-radius: 150px;width: 300px;height: 300px;}
+    75%  {background-color:green; left:0px; top:200px;border-radius: 150px;width: 300px;height: 300px;}
+    100% {background-color:red; left:0px; top:0px;border-radius: 150px;width: 300px;height: 300px;}
+  }
+footer{
+    padding: 4%;
+}
