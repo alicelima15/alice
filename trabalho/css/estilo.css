@@ -44,7 +44,7 @@ body {
     position: sticky;
     top: 0;
     background-color:#ffffff;
-    color: white;
+    color: rgb(255, 0, 221);
     /* padding: 20px 0; */
     /* text-align: center; */
     z-index: 1000;
