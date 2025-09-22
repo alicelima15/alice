@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h2o</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>
+            ZnO
+        </h1>
+        <h2>
+            Oxido de zinco
+        </h2>
+    </header>
+    <main>
+        <section id="fixo">
+            <img src="img/download.jpeg" alt="foto do oxido de zinco">
+            <img src="img/estruturaoxidodezinco.jpg" alt="estrutura do oxido de zinco">
+            <p> O óxido de zinco é um representante típico de materiais de óxido multifuncionais. Atualmente, a produção mundial de óxido de zinco excede um milhão de toneladas e a gama de aplicações é muito ampla. O óxido de zinco é usado como aditivo na borracha, na produção de cimento e concreto, como pigmento branco em tintas, em eletrônicos, em sensores, como catalisador de algumas reações orgânicas , como aditivo de absorção de UV em cosméticos, em farmácia, como componente de suplementos alimentares para humanos e em muitas outras áreas. Um estímulo importante para o aumento do interesse no óxido de zinco foi o recente desenvolvimento em nanotecnologia levando a formas nanoestruturadas de ZnO (nanopartículas, nanofios, nanocamadas , nanocompósitos , etc.), expandindo a gama de aplicações potenciais.<a href=" https://doi.org/10.1016/j.apmt.2017.11.006"> (Leitner, Bartůněk, Sedmidubský, Jankovský; 2018)</a></p>
+        </section>
+        <h2>Questionário para fixação</h2>
+        <section id="pergunta1">
+            <h3>Questão 1</h3>
+            <p>Onde obter ZnO?</p>
+            <input type="radio" name="p1" id="p1resposta1" value="1" >
+            <label for="p1resposta1"> Batom, shampoo, brincos</label><br>
+            
+            <input type="radio" name="p1" id="p1resposta2" value="1" >
+            <label for="p1resposta2"> Protetores solares, pomadas para assaduras e pastas de dente</label><br>
+            
+        
+            <button id="b1">Responder</button>
+            <div id="erroP1">Erro</div>
+        </section>
+        <section id="resposta1">
+            <img src="img/protetorsolar.webp" alt="protetor solar com oxido de zinco">
+            <p>Pode obter ZnO (óxido de zinco) em produtos comerciais como protetores solares, pomadas para assaduras e pastas de dente, onde é um ingrediente ativo.</p>
+        </section>
+        
+        <section id="pergunta2">
+            <h3>Questão 2</h3>
+            <p> O óxido de zinco (ZnO) possui que tipo de ligação?</p>
+            <input type="radio" name="p2" id="p2resposta1" value="1" >
+            <label for="p2resposta1">Iônica</label><br>
+            <input type="radio" name="p2" id="p2resposta2" value="1" >
+            <label for="p2resposta2">Covalente</label><br>
+            <input type="radio" name="p2" id="p2resposta3" value="1" >
+            <label for="p2resposta3">Metálica</label><br>
+            <button id="b2">Responder</button>
+            <div id="erroP2">Erro</div>
+        </section>
+        <section id="resposta2">
+            O óxido de zinco (ZnO) é geralmente considerado um composto com ligação iônica. O zinco é um metal e o oxigênio é um ametal, o que favorece uma transferência de elétrons (ligação iônica) para formar um cátion de zinco (Zn²⁺) e um ânion óxido (O²⁻). 
+        </section>
+    
+        <section id="montar">
+<h2> Questão Prática</h2>
+            <h3>Selecione os elementos que formam o óxido de zinco</h3>
+            <div id="gabarito">
+
+            </div>
+            <div id="alternativas">
+                <div onclick="criarc()">C</div>
+                <div onclick="criarzn()">Zn</div>
+                <div onclick="criarh()">H</div>
+                <div onclick="criaro()">O</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <script src="../JS/codigo.js"></script>
+    </footer>
+</body>
+</html>

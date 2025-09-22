@@ -1,0 +1,85 @@
+#fixo{
+    padding: 12px;
+    border-width: 2px;
+border-color: rgb(195, 0, 255);
+border-style: solid;
+}
+#pergunta1{
+    padding: 12px;
+    border-width: 2px;
+border-color: rgb(150, 63, 177);
+border-style: solid;
+margin-top: 10px;
+}
+#resposta1{
+    display:none;
+    color:green;
+    padding: 12px;
+    border-width: 2px;
+border-color: rgb(102, 255, 0);
+border-style:inset;
+margin-top: 10px;
+}
+#erroP1{
+    display:none;
+    color:rgb(162, 22, 190);
+}
+#pergunta2{
+    display:none;
+    padding: 12px;
+    border-width: 2px;
+border-color: rgb(255, 0, 221);
+border-style:solid;
+margin-top: 10px;
+}
+#resposta2{
+    display:none;
+    color:green;
+    padding: 12px;
+    border-width: 2px;
+border-color: rgb(102, 255, 0);
+border-style:inset;
+margin-top: 10px;
+}
+#erroP2{
+    display:none;
+    color:rgb(162, 22, 190);
+}
+#pergunta3{
+    display:none;
+}
+#resposta3{
+    display:none;
+    color:green;
+}
+#erroP3{
+    display:none;
+    color:rgb(162, 22, 190);
+}
+#pergunta1 div{
+    display:flexbox
+}
+#alternativas{
+    display:flex;
+    flex-direction: row;
+    color:blue
+}
+#alternativas div{
+    border: solid red 2px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 50%;
+}
+#gabarito{
+    display:flex;
+    width: 96%;
+    height: 40px;
+    border: solid red 2px;
+}
+#gabarito div{
+    border: solid red 2px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 50%;
+    width: 10px;
+}
