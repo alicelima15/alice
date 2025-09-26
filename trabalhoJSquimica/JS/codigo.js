@@ -1,7 +1,6 @@
 //listeners
 document.querySelector("#b1").addEventListener("click",verifica1);
 document.querySelector("#b2").addEventListener("click",verifica2);
-document.querySelector("#b3").addEventListener("click",verifica3);
 //funcoes
 function verifica1(){
     if(document.querySelector("#p1resposta2").checked){
@@ -17,23 +16,11 @@ function verifica1(){
 function verifica2(){
     if(document.querySelector("#p2resposta1").checked){
         document.querySelector("#resposta2").style.display="block";
-        document.querySelector("#pergunta3").style.display="block";
         document.querySelector("#erroP2").style.display="none";
         document.querySelector("#b2").style.display="none";
     }
     else{
         document.querySelector("#erroP2").style.display="block";
-    }
-}
-function verifica3(){
-    if(document.querySelector("#p3resposta1").checked){
-        document.querySelector("#resposta3").style.display="block";
-       
-        document.querySelector("#erroP3").style.display="none";
-        document.querySelector("#b3").style.display="none";
-    }
-    else{
-        document.querySelector("#erroP3").style.display="block";
     }
 }
 
@@ -50,7 +37,7 @@ function criarzn(){
     let texto=document.createTextNode("Zn");
     molecula.appendChild(texto);
     document.querySelector("#gabarito").appendChild(molecula);
-    gabarito=1;
+    gabarito=+1;
 }
 
 function criarh(){
