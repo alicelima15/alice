@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <header>      
+      <h1>Cronograma do 3° trimestre</h1>
+      <fieldset>
+        <legend>Informações estudantis</legend>
+      <h3> Estudante: Alice Lima</h3>
+      <h3> Idade: 18 anos</h3>
+      <h3> Data de nascimento: 28/05/2007</h3>
+      <h3> Matricula: 2022300571</h3>
+      <h3> Email: 2022300571@aluno.riogrande.ifrs.edu.br</h3>
+    </fieldset>
+    </header>
+    <main>
+      <fieldset>
+        <legend>Informações do cronograma</legend>
+        <input type='button'  value='Gravar Cronograma' id="gravar">
+        <input type='button'  value='Recuperar Cronograma' id="recuperar">
+        <input type='button'  value='Limpar' id="limpar">
+        <br><br>
+        <label for="avaliacao">Avaliação:</label>
+        <input type="text" name="avaliacao" id="avaliacao"><br><br>
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data"><br><br>
+        <input type='button'  value='Adicionar Avaliação' id="adicionar"> <br><br >
+      </fieldset>
+        <section id="cronograma">...</section>
+        
+    </main>
+
+    <script>
+      document.querySelector('#adicionar').addEventListener('click', insereAvaliação);
+      document.querySelector('#gravar').addEventListener('click', gravar);
+      document.querySelector('#recuperar').addEventListener('click', recuperar);
+      document.querySelector('#limpar').addEventListener('click', limpar);
+
+      let toDoList=[]; //Variável com os dados da TODO list
+
+      function mostra() {
+        let valor = "";
+        valor+=`<h3>Proximas avaliações</h3>`;
+        for (let i = 0; i < toDoList.length; i++) {
+          valor += `
+          <input type="checkbox" id="avaliacao${i}" onclick ="excluiravaliacao(${i})">
+          <label for="avaliacao${i}">${toDoList[i].avaliacao}.......${toDoList[i].data}</label><br>`;
+        }
+        document.querySelector("#cronograma").innerHTML = valor;
+      }
+
+      // Inclui e exclui terefas no array toDoList
+      function insereAvaliação() {
+        toDoList.push( {
+          avaliacao:document.querySelector("#avaliacao").value,
+          data:document.querySelector("#data").value
+        }
+          );
+        mostra();
+      }
+      function excluirAvaliação(num) {
+        toDoList.splice(num, 1);
+        mostra();
+      }
+
+      //Operações no localstorage
+      function gravar ()
+      {
+        localStorage.setItem("cronograma",JSON.stringify(toDoList));
+      }
+      function recuperar ()
+      {
+        toDoList=[];
+        cronograma=localStorage.getItem("cronograma");
+        if(cronograma){
+          toDoList=JSON.parse(cronograma);
+        }
+        mostra();
+      }
+      function limpar() {
+         localStorage.removeItem('cronograma');
+         toDoList=[];
+         mostra();
+      } 
+    </script>
+  </body>
+</html>

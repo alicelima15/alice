@@ -1,0 +1,17 @@
+/* css */
+body{
+    color:rgb(173, 25, 173)
+}
+h1{
+    color:rgb(224, 160, 21)
+}
+legend{
+    color:rgb(170, 18, 8)
+}
+[type=button]{
+    color:rgb(29, 119, 179);
+    padding: 10px;
+}
+fieldset{
+    border: 2px solid rgb(65, 85, 148);
+}
