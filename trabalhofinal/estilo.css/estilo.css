@@ -1,0 +1,95 @@
+section {min-height: 100vh;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.logomulhermais{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    
+}
+.logomulhermais img {
+    width: 130px;
+
+}
+.mulhermais{
+    display:flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 0px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    align-items: center;
+    font-size: 60px;
+}
+/* Menu sticky */
+.menu-sticky {
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    background-color:#8a0972;
+    color: white;
+    /* padding: 20px 0; */
+    /* text-align: center; */
+    z-index: 1000;
+    height: 230px; /* Altura definida explicitamente */
+}
+
+.menu-sticky nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.ajustamenu{
+    background-color: #eea0ea !important;
+}
+.menu-sticky nav a:hover {
+    color: #cce3e7;
+}
+
+
+h1 {
+    animation: linear aparece both;
+    animation-timeline: view();
+    animation-range: cover 10% cover 60%;
+}
+/* Seções - são as âncoras */
+section {
+    padding: 10px ; 
+    min-height: 100vh ;
+    text-align: center;
+    scroll-margin-top: 230px; /* Corresponde à altura do menu */
+}
+section h1{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.descricao{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mulhermaisfoto img{
+    width: 100%;
+}
+#inicio {
+    background-color: #e0e0e0;
+}
+footer{
+    padding: 4%;
+}
